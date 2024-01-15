@@ -51,7 +51,7 @@ const Navbar = () => {
                 <LocalLibraryIcon />
             </IconButton>
             <Typography variant='h6' component='div' sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>Nav Bar</Typography>
-            <IconButton>
+            <IconButton size='large' edge='start' color='inherit'>
                 <GTranslateIcon />
             </IconButton>
         </Toolbar>
