@@ -2,6 +2,9 @@ import { CssBaseline, ThemeProvider,Typography } from "@mui/material";
 import { appTheme } from "./themes/theme";
 import Breadcrumb from "./components/Breadcrumb";
 import Navbar from "./components/Navbar";
+import BlogList from "./components/BlogList";
+import MailBox from "./components/MailBox";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -12,7 +15,9 @@ function App() {
         <Typography variant="body1">
           <Breadcrumb/>
         </Typography>
-        
+        <BlogList/>
+        <MailBox/>
+        <Footer/>
        </>      
     </ThemeProvider>
   );
