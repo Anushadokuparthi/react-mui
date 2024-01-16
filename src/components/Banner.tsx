@@ -1,7 +1,9 @@
 import React from 'react';
 import { Box, Button, Card, CardContent, Typography } from "@mui/material";
-import { grey, indigo, lightBlue } from '@mui/material/colors';
+import { grey, indigo, } from '@mui/material/colors';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
+
+
 const Banner = () => {
     return (
         <>
@@ -61,6 +63,20 @@ const Banner = () => {
 
                             Suspendisse potenti. Nam auctor justo luctus risus eleifend varius. Nullam accumsan eget lacus eu pulvinar. Pellentesque pulvinar quis lorem non eleifend. Vestibulum vitae nibh orci. Mauris id enim at odio tempor imperdiet. Praesent eu purus sapien. Proin lorem velit, lacinia ac sodales at, commodo quis eros. Aliquam viverra, elit a vestibulum ornare, tellus turpis varius ex, eget facilisis nunc nisl interdum ex. Vestibulum aliquam accumsan leo, ac porttitor tellus tempus lacinia. Vestibulum porttitor finibus eros vitae consectetur.
                         </Typography>
+                        <Box sx={{borderRadius:'250px', width:'13px', display: 'flex', gap:'10px' }}>
+                        <Button variant="outlined" color="secondary" sx={{borderRadius:'250px'}}>
+                            #exam 
+                        </Button>
+                        <Button variant="outlined" color="secondary" sx={{borderRadius:'250px'}}>
+                            #exam 
+                        </Button>
+                        <Button variant="outlined" color="secondary" sx={{borderRadius:'250px'}}>
+                            #exam 
+                        </Button>
+                        <Button variant="outlined" color="secondary" sx={{borderRadius:'250px'}}>
+                            #exam 
+                        </Button>
+                        </Box>
                     </Box>
                 </CardContent>
             </Card>
