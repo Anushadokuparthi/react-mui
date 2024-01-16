@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, IconButton, Menu, MenuItem, Toolbar, Typography, } from "@mui/material";
+import { AppBar, Box, Button, IconButton, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
 import React, { useState, MouseEvent } from "react";
 import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -15,47 +15,42 @@ const Navbar = () => {
     const closeMenu = () => {
         setAnchorNav(null);
     };
-    return(
+    return (
         <AppBar position='static'>
-        <Toolbar>
-            <IconButton size='large' edge='start' color='inherit' aria-label='logo' sx={{ display: { xs: 'none', md: 'flex' } }}>
-                <LocalLibraryIcon />
-            </IconButton>
-            <Typography variant='h6' component='div' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>Nav Bar</Typography>
-            <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                {/* <Button color='inherit'>Home</Button>
-<Button color='inherit'>Features</Button>
-<Button color='inherit'>About</Button>
-<Button color='inherit'>Login</Button> */}
-                {pages.map((page) => (
-                    <Button color='inherit'>{page}</Button>
-                ))}
-            </Box>
-            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                <IconButton size='large' edge='start' color='inherit' onClick={openMenu} >
-                    <MenuIcon />
+            <Toolbar>
+                <IconButton size='medium' edge='start' color='inherit' aria-label='logo' sx={{ display: { xs: 'none', md: 'flex' } }}>
+                    <LocalLibraryIcon />
                 </IconButton>
-                <Menu open={Boolean(anchorNav)} onClose={closeMenu} sx={{ display: { xs: 'flex', md: 'none' } }}>
-                    {/* <MenuList>
-    <MenuItem>Home</MenuItem>
-    <MenuItem>Features</MenuItem>
-    <MenuItem>About </MenuItem>
-    <MenuItem>Login</MenuItem>
-  </MenuList> */}
+                <Typography variant='h6' component='div' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>Nav Bar</Typography>
+                <Box sx={{ display: { xs: 'none', md: 'flex' } }} >
+
                     {pages.map((page) => (
-                        <MenuItem>{page}</MenuItem>
+                        <Button color='inherit'>{page}</Button>
                     ))}
-                </Menu>
-            </Box>
-            <IconButton size='large' edge='start' color='inherit' aria-label='logo' sx={{ display: { xs: 'flex', md: 'none' } }}>
-                <LocalLibraryIcon />
-            </IconButton>
-            <Typography variant='h6' component='div' sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>Nav Bar</Typography>
-            <IconButton size='large' edge='start' color='inherit'>
-                <GTranslateIcon />
-            </IconButton>
-        </Toolbar>
-    </AppBar>
+                </Box>
+                <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                    <IconButton size='medium' edge='start' color='inherit' onClick={openMenu} >
+                        <MenuIcon />
+                    </IconButton>
+                    <Menu open={Boolean(anchorNav)} onClose={closeMenu} sx={{ display: { xs: 'flex', md: 'none' }, textTransform:'capitalize' }}>
+                        {pages.map((page) => (
+                            <MenuItem key={page}>
+                                <Typography variant="inherit" component="span">
+                                    {page}                                             
+                                </Typography>
+                            </MenuItem>
+                        ))}
+                    </Menu>
+                </Box>
+                <IconButton size='large' edge='start' color='inherit' aria-label='logo' sx={{ display: { xs: 'flex', md: 'none' } }}>
+                    <LocalLibraryIcon />
+                </IconButton>
+                <Typography variant='h6' component='div' sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>Nav Bar</Typography>
+                <IconButton size='large' edge='start' color='inherit'>
+                    <GTranslateIcon />
+                </IconButton>
+            </Toolbar>
+        </AppBar>
     );
 };
 
