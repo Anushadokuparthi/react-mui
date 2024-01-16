@@ -32,8 +32,6 @@ const BlogList = () => {
                         </Card>
                     </Grid>                 
                 </Grid>
-                
-            {/* </Box> */}
         </Container>
         </>
     )

@@ -13,8 +13,16 @@ let appTheme = createTheme({
       primary: {
         main: brown[900],
       },
-      secondary: orange,
-     
+      secondary: orange,     
+    },
+    components: {
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            textTransform: 'capitalize',
+          },
+        },
+      },
     },
 });
 

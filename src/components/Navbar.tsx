@@ -31,12 +31,12 @@ const Navbar = () => {
                     <IconButton size='medium' edge='start' color='inherit' onClick={openMenu} >
                         <MenuIcon />
                     </IconButton>
-                    <Menu open={Boolean(anchorNav)} onClose={closeMenu} sx={{ display: { xs: 'flex', md: 'none' }, textTransform:'capitalize' }}>
+                    <Menu open={Boolean(anchorNav)} onClose={closeMenu} sx={{ display: { xs: 'flex', md: 'none' }}}>
                         {pages.map((page) => (
-                            <MenuItem key={page}>
-                                <Typography variant="inherit" component="span">
-                                    {page}                                             
-                                </Typography>
+                            <MenuItem key={page} sx={{textTransform:'capitalize', padding:'0px 15px'}}>
+                                {/* <Typography variant="inherit" component="span" sx={{ textTransform: 'capitalize', padding:'0px 10px' }}> */}
+                                    {page}
+                                {/* </Typography> */}
                             </MenuItem>
                         ))}
                     </Menu>
