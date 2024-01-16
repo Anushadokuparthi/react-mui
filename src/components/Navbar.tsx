@@ -23,7 +23,6 @@ const Navbar = () => {
                 </IconButton>
                 <Typography variant='h6' component='div' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>Nav Bar</Typography>
                 <Box sx={{ display: { xs: 'none', md: 'flex' } }} >
-
                     {pages.map((page) => (
                         <Button color='inherit'>{page}</Button>
                     ))}

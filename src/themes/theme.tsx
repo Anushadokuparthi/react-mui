@@ -1,6 +1,7 @@
 import { brown, orange} from "@mui/material/colors";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { Theme } from '@mui/material/styles';
+import "@mui/styles";
 
 declare module '@mui/styles/defaultTheme' {
   interface DefaultTheme extends Theme {}

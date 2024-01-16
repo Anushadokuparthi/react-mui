@@ -11,9 +11,13 @@ function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
 
 export default function BasicBreadcrumbs() {
     return (
-        <Card variant="outlined">
+        <Card  variant="outlined">
             <div role="presentation" onClick={handleClick}>
-                <Breadcrumbs separator="›" sx={{ mx: 3, mt: 6, mb: 3 }}>
+                <Breadcrumbs style={{
+                    padding: '1px', // Replace with your desired padding value 
+                    marginLeft: '150px',
+                    display: 'flex',
+                }} separator="›" sx={{ mx: 3, mt: 6, mb: 3 }}>
                     <Link underline="hover" color="inherit" href="/">
                         <Typography color="secondary">Overview</Typography>
                     </Link>
